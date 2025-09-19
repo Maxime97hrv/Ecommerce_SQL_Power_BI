@@ -1,7 +1,8 @@
 ---------------------------------------------------- IMPORT OF THE DATA BASE -----------------------------------------------------------
 
 -- List of Orders.csv
-CREATE SCHEMA Public;
+CREATE SCHEMA Public; -- for the data imported
+CREATE SCHEMA clean_ecomm; -- Create the folder schema Clean_ecomm to put our datasets
 
 CREATE TABLE IF NOT EXISTS public.list_of_orders (
     order_id      text,
@@ -112,8 +113,6 @@ from public.sales_target
 where target < 0 or target > 20000; -- No rows, the dataset is consistent
 
 -- Cleaning
-CREATE SCHEMA clean_ecomm; -- Create the folder schema Clean_ecomm to put our datasets
-
 create table clean_ecomm.list_of_orders as -- for the leaning we don't want spaces on the state.
 select
 order_id,
@@ -131,7 +130,9 @@ create table clean_ecomm.sales_target as
 select * from public.sales_target; -- no treatment required
 -------------------------------------------------- DESCRIPTIVE STATISTICS -----------------------------------------------------------------
 
--- Totals
+-- CROSSINGS AND JOINTS
+
+-- Totals for the year
 select
 sum(amount) as total_amount,
 sum(profit) as total_profit,
@@ -139,6 +140,7 @@ sum(quantity) as total_quantity,
 count(distinct order_id) as number_of_orders
 from clean_ecomm.order_details;
 
+-- Total target for the year
 select 
 sum(target) as target_revenue
 from clean_ecomm.sales_target;
@@ -151,7 +153,7 @@ sum(profit) as profit_per_order,
 sum(quantity) as quantity_per_order
 from clean_ecomm.order_details
 group by order_id
-order by order_id asc;
+order by profit_per_order desc;
 
 -- Revenue, profit, quantity per category
 select
@@ -161,9 +163,9 @@ sum(profit) as profit_per_category,
 sum(quantity) as quantity_per_category
 from clean_ecomm.order_details
 group by category
-order by category asc;
+order by profit_per_category asc;
 
--- Revenue, profit, quantity per sub_category
+-- Revenue, profit, quantity by category and sub_category
 select
 category,
 sub_category,
@@ -172,9 +174,9 @@ sum(profit) as profit_per_sub_category,
 sum(quantity) as quantity_per_sub_category
 from clean_ecomm.order_details
 group by category,sub_category 
-order by category asc, sub_category asc;
+order by category, profit_per_sub_category desc;
 
--- Revenue, profit, quantity per customer
+-- Revenue, profit, quantity by customer
 select
 l.customername,
 sum(o.amount) as amount_per_customer,
@@ -183,20 +185,20 @@ sum(o.quantity) as quantity_per_customer
 from clean_ecomm.list_of_orders l
 inner join clean_ecomm.order_details o on o.order_id = l.order_id 
 group by l.customername
-order by l.customername ;
+order by profit_per_customer desc;
 
--- Revenue, profit, quantity per city
+-- Revenue, profit, quantity by city
 select
 l.city,
-sum(o.amount) as amount_per_customer,
-sum(o.profit) as profit_per_customer,
-sum(o.quantity) as quantity_per_customer
+sum(o.amount) as amount_per_city,
+sum(o.profit) as profit_per_city,
+sum(o.quantity) as quantity_per_city
 from clean_ecomm.list_of_orders l
 inner join clean_ecomm.order_details o on o.order_id = l.order_id 
 group by l.city
-order by l.city ;
+order by profit_per_city desc;
 
--- Revenue, profit, quantity per state
+-- Revenue, profit, quantity by state
 select
 l.state,
 sum(o.amount) as amount_per_customer,
@@ -205,13 +207,13 @@ sum(o.quantity) as quantity_per_customer
 from clean_ecomm.list_of_orders l
 inner join clean_ecomm.order_details o on o.order_id = l.order_id 
 group by l.state
-order by l.state ;
+order by profit_per_customer desc;
 
 -- Compare sales with target by month
 with order_by_month as
 (select
-to_char(l.order_date,'Mon-YY') as order_date, -- display format MMM-YY ex Apr-18 (month of the year)
 date_trunc('month', l.order_date) as order_month, -- Type date with month as unit
+TO_CHAR(l.order_date, 'Mon-YY') AS order_date_label, --display format MMM-YY ex Apr-18 (month of the year)
 sum(o.amount) as amount, -- we want the revenue total by month, same for the profit and quantity
 sum(o.profit) as profit,
 sum(o.quantity) as quantity
@@ -219,39 +221,86 @@ from clean_ecomm.list_of_orders l
 inner join clean_ecomm.order_details o on o.order_id = l.order_id
 group by date_trunc('month', l.order_date), to_char(l.order_date,'Mon-YY')) -- date_trunc: the sum must be group by the month of the year
 
-select 
-obm.order_date, -- we want the month of the year
+select
+obm.order_date_label,
 obm.amount, obm.profit, obm.quantity,
-sum(s.target) as target
+sum(s.target) as target,
+sum(s.target) - obm.amount as diff_amount_target
 from order_by_month obm
-inner join sales_target s on s.month_of_order_date = obm.order_date
-group by obm.order_month, obm.order_date, obm.amount, obm.profit, obm.quantity
+inner join sales_target s on s.month_of_order_date = obm.order_date_label
+group by obm.order_date_label, obm.order_month, obm.amount, obm.profit, obm.quantity
 order by obm.order_month;
 
+-- Compare sales with target by category
+select
+o.category,
+sum(o.amount) as sum_amount_category,
+sum(o.profit) as sum_profit_category,
+sum(o.quantity) as sum_quantity_category,
+s.sum_target_category
+from clean_ecomm.order_details o
+inner join (select category, sum(target) as sum_target_category from clean_ecomm.sales_target group by category) as s
+on s.category = o.category
+group by o.category, s.sum_target_category
+order by sum_profit_category desc;
 
 
+-- Compare sales with target by month and category
+with order_by_month_cat as
+(select
+to_char(l.order_date,'Mon-YY') as order_date, -- display format MMM-YY ex Apr-18 (month of the year)
+date_trunc('month', l.order_date) as order_month, --Type date with month as unit
+o.category,
+sum(o.amount) as sum_amount_per_mcat, -- we want the revenue total by month, same for the profit and quantity
+sum(o.profit) as sum_profit_per_mcat,
+sum(o.quantity) as sum_quantity_per_mcat
+from clean_ecomm.list_of_orders l
+inner join clean_ecomm.order_details o on o.order_id = l.order_id
+group by date_trunc('month', l.order_date), to_char(l.order_date,'Mon-YY'), o.category)
 
+select
+oc.order_date, oc.category, oc.sum_amount_per_mcat, oc.sum_profit_per_mcat, oc.sum_quantity_per_mcat,
+st.target
+from order_by_month_cat oc
+inner join clean_ecomm.sales_target st on st.month_of_order_date = oc.order_date and st.category = oc.category
+order by oc.order_month, oc.category, oc.sum_profit_per_mcat desc;
 
+-- AGGREGATIONS/SYNTHESES
 
+-- total revenue, profit, quantity by order and customer
+select
+l.customername,
+l.order_id, 
+sum(o.amount) as amount_per_customer, 
+sum(o.profit) as profit_per_customer,
+avg(o.profit) as avgprofit_per_customer,
+sum(o.quantity) as quantoty_per_customer
+from clean_ecomm.list_of_orders l
+inner join clean_ecomm.order_details o
+on l.order_id = o.order_id 
+group by l.customername, l.order_id
+order by l.customername;
 
+-- By region (state/city): total revenue, total profit, total sales, top cities.
+with city_profit as 
+(select
+l.state,
+l.city,
+sum(o.amount) as amount_per_city,
+sum(o.profit) as profit_per_city,
+sum(o.quantity) as quantity_per_city
+from clean_ecomm.list_of_orders l
+inner join clean_ecomm.order_details as o
+on o.order_id = l.order_id
+group by l.state, l.city), ranked as
+(select *,
+cume_dist() over(order by profit_per_city desc) as pr from city_profit -- cumulative proportion of lines whose value is ≤ the current value
+)
 
+select state, city, amount_per_city, profit_per_city, quantity_per_city
+from ranked
+where pr <= 0.33 -- curent value for the top cities we want to retain
+order by profit_per_city desc;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- sales trends, profits, and comparison vs. target by quarter
 
