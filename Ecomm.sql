@@ -348,7 +348,8 @@ inner join clean_ecomm.order_details o on o.order_id = l.order_id
 group by date_trunc('month', l.order_date), to_char(l.order_date,'Mon-YY'), o.category, o.sub_category)
 
 select
-oc.order_date_text as order_date, 
+oc.order_date_text as order_date,
+oc.order_month,
 oc.category, oc.sub_category, oc.sum_amount_per_sub, oc.sum_profit_per_sub,
 COALESCE(100 * oc.sum_profit_per_sub / NULLIF(oc.sum_amount_per_sub, 0), 0) AS marge,
 oc.sum_quantity_per_sub,
