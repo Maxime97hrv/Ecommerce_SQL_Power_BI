@@ -106,6 +106,13 @@ select *
 from public.sales_target
 where category <> trim(category); -- any space
 
+-- Identify orphaned order_ids
+SELECT od.order_id
+FROM public.order_details od
+LEFT JOIN public.list_of_orders lo 
+       ON od.order_id = lo.order_id
+WHERE lo.order_id IS NULL; -- Any orphaned ID
+
 -- Check CONSISTENCY
 select * 
 from public.order_details
@@ -342,8 +349,8 @@ group by date_trunc('month', l.order_date), to_char(l.order_date,'Mon-YY'), o.ca
 
 select
 oc.order_date_text as order_date, 
-oc.category, oc.sub_category, oc.sum_amount_per_sub, 
-COALESCE(oc.sum_profit_per_sub / NULLIF(oc.sum_amount_per_sub, 0), 0) AS marge,
+oc.category, oc.sub_category, oc.sum_amount_per_sub, oc.sum_profit_per_sub,
+COALESCE(100 * oc.sum_profit_per_sub / NULLIF(oc.sum_amount_per_sub, 0), 0) AS marge,
 oc.sum_quantity_per_sub,
 st.target
 from order_by_month_cat oc
@@ -380,28 +387,13 @@ inner join clean_ecomm.order_details o on o.order_id = l.order_id
 group by date_trunc('month', l.order_date), to_char(l.order_date,'Mon-YY'), o.category)
 
 select
-oc.order_date, oc.category, oc.sum_amount_per_mcat,
+oc.order_date as order_date_text, oc.order_month, oc.category, oc.sum_amount_per_mcat,
 st.target,
 oc.sum_amount_per_mcat - st.target as Diff_amount_target,
 100*oc.sum_amount_per_mcat/st.target as achievement
 from order_by_month_cat oc
 inner join clean_ecomm.sales_target st on st.month_of_order_date = oc.order_date and st.category = oc.category
 order by oc.order_month, oc.category;
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
 
 
 
