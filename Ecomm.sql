@@ -331,6 +331,15 @@ order by profit_per_city desc;
 
 -------------------------------------- INTERMEDIATE TABLES OR VIEWS TO SIMPLIFY POWER BI -------------------------------------------------------
 
+-- Merge list_order_target
+create table public.merge_list_order_target as
+select l.order_id, to_char(l.order_date, 'Mon-YY') as order_date_texte, l.customername, l.state, l.city,
+o.amount, o.profit, o.quantity, o.category, o.sub_category,
+s.target
+from clean_ecomm.list_of_orders l
+inner join clean_ecomm.order_details o on l.order_id = o.order_id
+inner join clean_ecomm.sales_target s on to_char(l.order_date, 'Mon-YY') = s.month_of_order_date and s.category = o.category;
+
 --sales_summary : Revenue, profit, margin by category/subcategory and month
 
 create table clean_ecomm.sales_summary as
