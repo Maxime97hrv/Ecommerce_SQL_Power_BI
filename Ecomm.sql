@@ -41,8 +41,18 @@ COPY public.sales_target
 FROM 'D:/TAFF/Job Data Analyst/portfolio/GitHub/Ecomm SQL Power BI/DataBase/Sales target.csv'
 DELIMITER ',' CSV HEADER;
 
+-- Indian cities Lat and Long for Power BI
+CREATE TABLE IF NOT EXISTS public.indian_cities (
+    city              TEXT,
+    state			  TEXT,	
+    lat               NUMERIC,
+    lng               NUMERIC
+);
+COPY public.indian_cities
+FROM 'D:/TAFF/Job Data Analyst/portfolio/GitHub/Ecomm SQL Power BI/DataBase/Indian_cities.csv'
+DELIMITER ',' CSV HEADER;
 
--------------------------------------------------- CLEANING DATA -----------------------------------------------------------------------
+-------------------------------------------------- CONTROL DATA QUALITY -----------------------------------------------------------------------
 
 -- Check columns with NULLS
 Select 
@@ -122,22 +132,78 @@ select *
 from public.sales_target
 where target < 0 or target > 20000; -- No rows, the dataset is consistent
 
--- Cleaning
+-- Check duplicates on indian_cities
+SELECT city, COUNT(*)
+FROM public.indian_cities
+GROUP BY city
+HAVING COUNT(*) > 1; --21 duplicates!
+
+-- Check link between Lat Long cities and list of orders
+SELECT
+    l.order_id,
+    l.city, i.lat, i.lng
+FROM public.list_of_orders l
+LEFT JOIN public.indian_cities i 
+       ON l.city = i.city
+WHERE i.lat IS NULL   -- no correspondance
+order by l.city;  -- <- there is 4 cities with no correspondance: Allahabad, Goa, Kashmir, Kohima, Simla.
+
+-- Allahabad → officially renamed Prayagraj.
+-- Goa → it's a state, not a city → we choose capital (e.g., Panaji).
+-- Kashmir → it's a region, not a city → we map to Srinagar (summer capital).
+-- Simla → old name → now Shimla (capital of Himachal Pradesh).
+-- Kohima → does exist, may be misspelled or missing an accent.
+INSERT INTO public.indian_cities (city, state, lat, lng)
+VALUES ('Kohima', 'Nagaland', 25.6747, 94.1100);
+
+
+----------------------------------------------- CLEANING AND CREATING FIRST TABLES -----------------------------------------------------------
+
+-- Indian cities clean without duplicates
+CREATE TABLE public.indian_cities_clean AS
+SELECT DISTINCT city, Min(lat) as lat, Min(lng) as lng
+FROM public.indian_cities
+group by city;
+
+SELECT city, COUNT(*)
+FROM public.indian_cities_clean
+GROUP BY city
+HAVING COUNT(*) > 1;
+
+-- list_of_orders
 create table clean_ecomm.list_of_orders as -- for the leaning we don't want spaces on the state.
 select
-order_id,
-order_date,
-customername,
-trim(state) as state, -- for delete spaces on the state Kerala
-city
-FROM public.list_of_orders
-where order_id is not null; -- we remove the null lines
+l.order_id,
+l.order_date,
+l.customername,
+trim(l.state) as state, -- for delete spaces on the state Kerala
+case 
+when l.city = 'Allahabad' then 'Prayagraj' -- We change the name of cities because the Indian name of cities have changed
+when l.city = 'Goa' then 'Panaji'
+when l.city = 'Kashmir' then 'Srinagar'
+when l.city = 'Simla' then 'Shimla'
+else l.city
+end as city,
+i.lat, i.lng
+FROM public.list_of_orders l
+left join public.indian_cities_clean i on i.city = 
+(case 
+when l.city = 'Allahabad' then 'Prayagraj'
+when l.city = 'Goa' then 'Panaji'
+when l.city = 'Kashmir' then 'Srinagar'
+when l.city = 'Simla' then 'Shimla'
+else l.city end)
+where l.order_id is not null; -- we remove the null lines
 
+-- orders_details
 create table clean_ecomm.order_details as
 select * from public.order_details; -- no treatment required
 
+-- sales_target
 create table clean_ecomm.sales_target as
 select * from public.sales_target; -- no treatment required
+
+
 -------------------------------------------------- DESCRIPTIVE STATISTICS -----------------------------------------------------------------
 
 -- CROSSINGS AND JOINTS
@@ -334,7 +400,7 @@ order by profit_per_city desc;
 -- Merge list_order_target
 create table clean_ecomm.merge_list_order_target as
 select l.order_id, to_char(l.order_date, 'Mon-YY') as order_date_texte, 
-date_trunc('month', l.order_date)::date as order_month, l.customername, l.state, l.city,
+date_trunc('month', l.order_date)::date as order_month, l.customername, l.state, l.city, l.lat, l.lng,
 o.amount, o.profit, o.quantity, o.category, o.sub_category,
 s.target
 from clean_ecomm.list_of_orders l
@@ -375,13 +441,15 @@ select
 l.state,
 l.city,
 l.customername,
+l.lat,
+l.lng,
 sum(o.amount) as amount_per_customer,
 sum(o.profit) as profit_per_customer,
 100 * sum(o.profit) / NULLIF(sum(o.amount), 0) as marge,
 sum(o.quantity) as quantity_per_customer
 from clean_ecomm.list_of_orders l
 inner join clean_ecomm.order_details o on o.order_id = l.order_id 
-group by l.customername, l.state, l.city
+group by l.customername, l.state, l.city, l.lat, l.lng
 order by l.state, l.city, amount_per_customer;
 
 -- performance_vs_target: Actual revenue vs. target by category and month, with variance and % achieved.
