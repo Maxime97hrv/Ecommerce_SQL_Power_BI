@@ -400,7 +400,7 @@ order by profit_per_city desc;
 -- Merge list_order_target
 create table clean_ecomm.merge_list_order_target as
 select l.order_id, to_char(l.order_date, 'Mon-YY') as order_date_texte, 
-date_trunc('month', l.order_date)::date as order_month, l.customername, l.state, l.city, l.lat, l.lng,
+date_trunc('month', l.order_date)::date as order_month, l.order_date, l.customername, l.state, l.city, l.lat, l.lng,
 o.amount, o.profit, o.quantity, o.category, o.sub_category,
 s.target
 from clean_ecomm.list_of_orders l
