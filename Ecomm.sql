@@ -450,7 +450,14 @@ sum(o.quantity) as quantity_per_customer
 from clean_ecomm.list_of_orders l
 inner join clean_ecomm.order_details o on o.order_id = l.order_id 
 group by l.customername, l.state, l.city, l.lat, l.lng
-order by l.state, l.city, amount_per_customer;
+order by customername;
+
+
+select 
+customername, count(*) from clean_ecomm.client_summary
+group by customername
+having count(*) > 1
+order by count(*) desc;
 
 -- performance_vs_target: Actual revenue vs. target by category and month, with variance and % achieved.
 
