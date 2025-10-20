@@ -470,19 +470,22 @@ o.category,
 sum(o.amount) as sum_amount_per_mcat -- we want the revenue total by month and category
 from clean_ecomm.list_of_orders l
 inner join clean_ecomm.order_details o on o.order_id = l.order_id
-group by date_trunc('month', l.order_date), to_char(l.order_date,'Mon-YY'), o.category)
+group by date_trunc('month', l.order_date), to_char(l.order_date,'Mon-YY'), o.category),
 
-select
+order_target as (select
 oc.order_date as order_date_text, oc.order_month, oc.category, oc.sum_amount_per_mcat,
 st.target,
 oc.sum_amount_per_mcat - st.target as Diff_amount_target,
-100*oc.sum_amount_per_mcat/st.target as achievement
+oc.sum_amount_per_mcat/st.target as achievement
 from order_by_month_cat oc
 inner join clean_ecomm.sales_target st on st.month_of_order_date = oc.order_date and st.category = oc.category
-order by oc.order_month, oc.category;
+order by oc.order_month, oc.category)
 
-
-
-
+select *,
+LAG(Diff_amount_target) OVER (
+    PARTITION BY category
+    ORDER BY order_month
+  ) AS prev_month_amount  from order_target
+order by order_month, category;
 
 
