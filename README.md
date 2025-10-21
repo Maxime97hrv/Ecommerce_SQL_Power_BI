@@ -54,7 +54,7 @@ Cette base permet d’analyser les performances commerciales, d’évaluer les �
 À partir de la base de données e-commerce, quatre tables ont été créées et modélisées afin d’alimenter les quatre pages principales du tableau de bord Power BI.
 Chaque page offre une perspective complémentaire sur la performance commerciale.
 
-- *[Page 1: Global Dashboard]("./Screen Power BI/1- Global_Dashboard.PNG")* : Cette première page présente les indicateurs clés de performance (KPI) : chiffre d’affaires, bénéfice, marge et taux d’atteinte des objectifs.
+- [Page 1: Global Dashboard](./Screen Power BI/1- Global_Dashboard.PNG) : Cette première page présente les indicateurs clés de performance (KPI) : chiffre d’affaires, bénéfice, marge et taux d’atteinte des objectifs.
 Des filtres dynamiques permettent de visualiser les performances par période, catégorie ou sous-catégorie.
 L’objectif est de donner une vision synthétique et immédiate de la santé commerciale de l’entreprise.
 
