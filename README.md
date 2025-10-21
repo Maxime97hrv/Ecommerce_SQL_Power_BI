@@ -60,6 +60,11 @@ From the e-commerce dataset, four tables were created and modeled to feed the **
 - [Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG) : Tracking sales and target evolution over time using a stacked column + line chart to reveal trends and seasonality.  
 - [Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG) : Study of category contribution and distribution, with a stacked column chart and product summary for easy comparison and decision-making.  
 
+
+Customer & Regional Analysis 👉 <a href="./Screen_PowerBI/2-Customer_and_Regional_analysis.PNG" target="_blank">here</a>  
+
+
+
 ## 💼 Created by
 
 **Maxime HERVÉ**  
@@ -123,10 +128,10 @@ Cette base permet d’analyser les performances commerciales, d’évaluer les �
 
 À partir de la base e-commerce, quatre tables ont été créées et modélisées pour alimenter les quatre pages principales du tableau de bord Power BI, offrant une vision complète de la performance commerciale.
 
-- *Page 1 - Global dashboard* : Vue d’ensemble des KPI clés (chiffre d’affaires, bénéfice, marge, taux d’atteinte). Des filtres dynamiques permettent d’explorer les performances par période ou catégorie.
-- *Page 2 - Customer & Regional* : Analysis – Analyse détaillée des ventes par catégorie et sous-catégorie, avec un waterfall chart pour les écarts et un line chart pour le taux d’atteinte.
-- *Page 3 - Product and Category* : Insights – Suivi de l’évolution des ventes et des objectifs dans le temps, à l’aide d’un stacked column + line chart révélant les tendances et la saisonnalité.
-- *Page 4 - Performance Analysis* :  Étude de la contribution et répartition des catégories, avec un stacked column chart et une synthèse par produit pour faciliter la comparaison et la prise de décision.
+- [Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG) : Vue d’ensemble des KPI clés (chiffre d’affaires, bénéfice, marge, taux d’atteinte). Des filtres dynamiques permettent d’explorer les performances par période ou catégorie.
+- [Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG) : Analysis – Analyse détaillée des ventes par catégorie et sous-catégorie, avec un waterfall chart pour les écarts et un line chart pour le taux d’atteinte.
+- [Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG) : Insights – Suivi de l’évolution des ventes et des objectifs dans le temps, à l’aide d’un stacked column + line chart révélant les tendances et la saisonnalité.
+- [Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG) :  Étude de la contribution et répartition des catégories, avec un stacked column chart et une synthèse par produit pour faciliter la comparaison et la prise de décision.
 
 ## 💼 Réalisé par
 
