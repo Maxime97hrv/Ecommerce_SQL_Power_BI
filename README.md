@@ -51,11 +51,11 @@ The dataset used in this project comes from an Indian e-commerce dataset availab
 
 This dataset enables the analysis of sales performance, evaluation of gaps between actual results and targets, and monitoring of performance by product category.  
 
-## 📱 🔍 Results 👉 [here](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG)
+## 📱 🔍 Results
 
 From the e-commerce dataset, four tables were created and modeled to feed the **four main pages** of the Power BI dashboard, offering a complete view of business performance.  
 
-- *Page 1 - Global Dashboard*: Overview of key KPIs (revenue, profit, margin, achievement rate). Dynamic filters allow exploration by period or category.  
+- [*Page 1 - Global Dashboard*](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG): Overview of key KPIs (revenue, profit, margin, achievement rate). Dynamic filters allow exploration by period or category.  
 - *Page 2 - Customer & Regional Analysis*: Detailed analysis of sales by category and subcategory, with a waterfall chart for gaps and a line chart for achievement rate.  
 - *Page 3 - Product and Category Insights*: Tracking sales and target evolution over time using a stacked column + line chart to reveal trends and seasonality.  
 - *Page 4 - Performance Analysis*: Study of category contribution and distribution, with a stacked column chart and product summary for easy comparison and decision-making.  
