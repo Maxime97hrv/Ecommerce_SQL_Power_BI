@@ -1,3 +1,73 @@
+# 🇬🇧 Sales Performance Analysis – SQL & Power BI Dashboard
+
+This project aims to analyze a company’s sales performance through an interactive Power BI dashboard.  
+Data was extracted, cleaned, and transformed using SQL, then visualized in Power BI to facilitate performance tracking against business targets.
+
+## 📥 Download the Power BI File
+
+👉 [Click here to download the `.pbix` file](./Ecomm_dashboard.pbix)
+
+## 🎯 Objective
+
+- Extract and transform raw data using SQL queries.  
+- Design a clear and dynamic Power BI dashboard to monitor sales performance.  
+- Highlight gaps between actual results and defined targets.  
+- Provide a visual decision-making tool for management.  
+
+## 🧠 Hard Skills
+
+- SQL query writing: joins, aggregations, CTEs, dynamic calculations. See SQL code 👉 [here](./Ecomm.sql)  
+- Data cleaning, transformation, and modeling.  
+- Creation of measures and KPIs in Power BI (DAX).  
+- Use of Power Query for table management.  
+- Advanced visualization: waterfall chart, line chart, stacked column + line chart.  
+- Performance analysis (variance, achievement rate, trends).  
+
+## 🤝 Soft Skills
+
+- Analytical and synthesis mindset.  
+- Organization and precision in data handling.  
+- Visual communication and design sense.  
+- Autonomy in project execution.  
+
+## 📊 Dashboard Overview
+
+The dashboard provides an overview of monthly performance by product category.  
+Visualizations allow users to:
+
+- Compare actual performance vs targets (waterfall chart).  
+- Track achievement rate (%) by category (line chart).  
+- Visualize sales and target trends over time (stacked column + line chart).  
+- Identify each category’s contribution to overall performance.  
+- This dashboard offers a fast and visual understanding of business performance and improvement areas.  
+
+## 📁 Dataset
+
+The dataset used in this project comes from an Indian e-commerce dataset available on Kaggle. It consists of three main CSV files:  
+
+- **List of Orders**: purchase details including order ID, purchase date, and customer information.  
+- **Order Details**: order ID, price, quantity, profit, category, and subcategory of products.  
+- **Sales Target**: sales targets by product category, including target amount and corresponding date.  
+
+This dataset enables the analysis of sales performance, evaluation of gaps between actual results and targets, and monitoring of performance by product category.  
+
+## 📱 🔍 Results 👉 [here](./Screen Power BI)
+
+From the e-commerce dataset, four tables were created and modeled to feed the **four main pages** of the Power BI dashboard, offering a complete view of business performance.  
+
+- *Page 1 - Global Dashboard*: Overview of key KPIs (revenue, profit, margin, achievement rate). Dynamic filters allow exploration by period or category.  
+- *Page 2 - Customer & Regional Analysis*: Detailed analysis of sales by category and subcategory, with a waterfall chart for gaps and a line chart for achievement rate.  
+- *Page 3 - Product and Category Insights*: Tracking sales and target evolution over time using a stacked column + line chart to reveal trends and seasonality.  
+- *Page 4 - Performance Analysis*: Study of category contribution and distribution, with a stacked column chart and product summary for easy comparison and decision-making.  
+
+## 💼 Created by
+
+**Maxime HERVÉ**  
+📎 [My LinkedIn Profile](https://www.linkedin.com/in/maxime-herve-05925a144/)  
+📧 Contact: maxime.herve97@gmail.com  
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # 🇫🇷 Analyse des performances commerciales – SQL & Power BI Dashboard
 
 Ce projet vise à analyser la performance commerciale d’une entreprise à travers un tableau de bord interactif créé sur Power BI.
@@ -49,31 +119,20 @@ Order Details : détails des commandes, incluant l’ID de commande, le prix, la
 Sales Target : les objectifs de vente par catégorie de produit, avec le montant et la date correspondante.
 Cette base permet d’analyser les performances commerciales, d’évaluer les écarts entre résultats réels et objectifs, et de suivre la performance par catégorie de produit.
 
-## 🔍 Résultats
+## 🔍 Résultats 👉 [ici](./Screen Power BI)
 
-À partir de la base de données e-commerce, quatre tables ont été créées et modélisées afin d’alimenter les quatre pages principales du tableau de bord Power BI.
-Chaque page offre une perspective complémentaire sur la performance commerciale.
+À partir de la base e-commerce, quatre tables ont été créées et modélisées pour alimenter les quatre pages principales du tableau de bord Power BI, offrant une vision complète de la performance commerciale.
 
-[Page 1: Global Dashboard](./Screen Power BI/1- Global_Dashboard.PNG) : Cette première page présente les indicateurs clés de performance (KPI) : chiffre d’affaires, bénéfice, marge et taux d’atteinte des objectifs.
-Des filtres dynamiques permettent de visualiser les performances par période, catégorie ou sous-catégorie.
-L’objectif est de donner une vision synthétique et immédiate de la santé commerciale de l’entreprise.
-
-- *Page 2 : Customer_&_Regianal_analysis* : Cette page détaille la performance des ventes par catégorie et sous-catégorie de produits.
-Un waterfall chart met en évidence la différence entre les performances réelles et les objectifs, tandis qu’un line chart illustre le taux d’atteinte (%) de chaque catégorie.
-Elle permet d’identifier les produits performants et ceux nécessitant une attention particulière.
-
-- *Page 3 : Product_and_category_insights* : Cette page se concentre sur l’évolution des ventes et des objectifs dans le temps.
-Un graphique combiné (stacked column + line chart) affiche la somme des montants vendus par période, avec une ligne représentant la somme des objectifs.
-Elle aide à comprendre la saisonnalité des ventes et à repérer les mois de sur- ou sous-performance.
-
-- *Page 4 : Performance_Analysis* : Cette dernière page met en avant la répartition et la contribution des catégories dans la performance globale.
-Elle comprend un stacked column chart avec les pourcentages d’atteinte et une vue synthétique par produit.
-Cette page facilite la comparaison entre catégories et soutient la prise de décision stratégique.
+- *Page 1 - Global dashboard* : Vue d’ensemble des KPI clés (chiffre d’affaires, bénéfice, marge, taux d’atteinte). Des filtres dynamiques permettent d’explorer les performances par période ou catégorie.
+- *Page 2 - Customer & Regional* : Analysis – Analyse détaillée des ventes par catégorie et sous-catégorie, avec un waterfall chart pour les écarts et un line chart pour le taux d’atteinte.
+- *Page 3 - Product and Category* : Insights – Suivi de l’évolution des ventes et des objectifs dans le temps, à l’aide d’un stacked column + line chart révélant les tendances et la saisonnalité.
+- *Page 4 - Performance Analysis* :  Étude de la contribution et répartition des catégories, avec un stacked column chart et une synthèse par produit pour faciliter la comparaison et la prise de décision.
 
 ## 💼 Réalisé par
 
 **Maxime HERVÉ**  
 📎 [Mon profil LinkedIn](https://www.linkedin.com/in/maxime-herve-05925a144/)  
 📧 Contact : maxime.herve97@gmail.com
+
 
 ---
