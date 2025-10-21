@@ -55,10 +55,10 @@ This dataset enables the analysis of sales performance, evaluation of gaps betwe
 
 From the e-commerce dataset, four tables were created and modeled to feed the **four main pages** of the Power BI dashboard, offering a complete view of business performance.  
 
-- [*Page 1 - Global Dashboard*](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG): Overview of key KPIs (revenue, profit, margin, achievement rate). Dynamic filters allow exploration by period or category.  
-- *Page 2 - Customer & Regional Analysis*: Detailed analysis of sales by category and subcategory, with a waterfall chart for gaps and a line chart for achievement rate.  
-- *Page 3 - Product and Category Insights*: Tracking sales and target evolution over time using a stacked column + line chart to reveal trends and seasonality.  
-- *Page 4 - Performance Analysis*: Study of category contribution and distribution, with a stacked column chart and product summary for easy comparison and decision-making.  
+- [Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG) : Overview of key KPIs (revenue, profit, margin, achievement rate). Dynamic filters allow exploration by period or category.  
+- [Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG) : Detailed analysis of sales by category and subcategory, with a waterfall chart for gaps and a line chart for achievement rate.  
+- [Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG) : Tracking sales and target evolution over time using a stacked column + line chart to reveal trends and seasonality.  
+- [Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG) : Study of category contribution and distribution, with a stacked column chart and product summary for easy comparison and decision-making.  
 
 ## 💼 Created by
 
