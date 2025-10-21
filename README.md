@@ -51,7 +51,7 @@ The dataset used in this project comes from an Indian e-commerce dataset availab
 
 This dataset enables the analysis of sales performance, evaluation of gaps between actual results and targets, and monitoring of performance by product category.  
 
-## 📱 🔍 Results 👉 [here](./Screen Power BI/1- Global_Dashboard.PNG)
+## 📱 🔍 Results 👉 [here](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG)
 
 From the e-commerce dataset, four tables were created and modeled to feed the **four main pages** of the Power BI dashboard, offering a complete view of business performance.  
 
