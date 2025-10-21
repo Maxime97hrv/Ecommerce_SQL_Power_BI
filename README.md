@@ -51,7 +51,24 @@ Cette base permet d’analyser les performances commerciales, d’évaluer les �
 
 ## 🔍 Résultats
 
-4 Dashboards ont été créés à partir de la base de données 
+À partir de la base de données e-commerce, quatre tables ont été créées et modélisées afin d’alimenter les quatre pages principales du tableau de bord Power BI.
+Chaque page offre une perspective complémentaire sur la performance commerciale.
+
+- *[Page 1: Global Dashboard]("./Screen Power BI/1- Global_Dashboard.PNG")* : Cette première page présente les indicateurs clés de performance (KPI) : chiffre d’affaires, bénéfice, marge et taux d’atteinte des objectifs.
+Des filtres dynamiques permettent de visualiser les performances par période, catégorie ou sous-catégorie.
+L’objectif est de donner une vision synthétique et immédiate de la santé commerciale de l’entreprise.
+
+- *Page 2 : Customer_&_Regianal_analysis* : Cette page détaille la performance des ventes par catégorie et sous-catégorie de produits.
+Un waterfall chart met en évidence la différence entre les performances réelles et les objectifs, tandis qu’un line chart illustre le taux d’atteinte (%) de chaque catégorie.
+Elle permet d’identifier les produits performants et ceux nécessitant une attention particulière.
+
+- *Page 3 : Product_and_category_insights* : Cette page se concentre sur l’évolution des ventes et des objectifs dans le temps.
+Un graphique combiné (stacked column + line chart) affiche la somme des montants vendus par période, avec une ligne représentant la somme des objectifs.
+Elle aide à comprendre la saisonnalité des ventes et à repérer les mois de sur- ou sous-performance.
+
+- *Page 4 : Performance_Analysis* : Cette dernière page met en avant la répartition et la contribution des catégories dans la performance globale.
+Elle comprend un stacked column chart avec les pourcentages d’atteinte et une vue synthétique par produit.
+Cette page facilite la comparaison entre catégories et soutient la prise de décision stratégique.
 
 ## 💼 Réalisé par
 
