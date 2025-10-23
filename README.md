@@ -1,78 +1,3 @@
-# 🇬🇧 Sales Performance Analysis – SQL & Power BI Dashboard
-
-This project aims to analyze a company’s sales performance through an interactive Power BI dashboard.  
-Data was extracted, cleaned, and transformed using SQL, then visualized in Power BI to facilitate performance tracking against business targets.
-
-## 📥 Download the Power BI File
-
-👉 [Click here to download the `.pbix` file](./Ecomm_dashboard.pbix)
-
-## 🎯 Objective
-
-- Extract and transform raw data using SQL queries.  
-- Design a clear and dynamic Power BI dashboard to monitor sales performance.  
-- Highlight gaps between actual results and defined targets.  
-- Provide a visual decision-making tool for management.  
-
-## 🧠 Hard Skills
-
-- SQL query writing: joins, aggregations, CTEs, dynamic calculations. See SQL code 👉 [here](./Ecomm.sql)  
-- Data cleaning, transformation, and modeling.  
-- Creation of measures and KPIs in Power BI (DAX).  
-- Use of Power Query for table management.  
-- Advanced visualization: waterfall chart, line chart, stacked column + line chart.  
-- Performance analysis (variance, achievement rate, trends).  
-
-## 🤝 Soft Skills
-
-- Analytical and synthesis mindset.  
-- Organization and precision in data handling.  
-- Visual communication and design sense.  
-- Autonomy in project execution.  
-
-## 📊 Dashboard Overview
-
-The dashboard provides an overview of monthly performance by product category.  
-Visualizations allow users to:
-
-- Compare actual performance vs targets (waterfall chart).  
-- Track achievement rate (%) by category (line chart).  
-- Visualize sales and target trends over time (stacked column + line chart).  
-- Identify each category’s contribution to overall performance.  
-- This dashboard offers a fast and visual understanding of business performance and improvement areas.  
-
-## 📁 Dataset
-
-The dataset used in this project comes from an Indian e-commerce dataset available on Kaggle. It consists of three main CSV files:  
-
-- **List of Orders**: purchase details including order ID, purchase date, and customer information.  
-- **Order Details**: order ID, price, quantity, profit, category, and subcategory of products.  
-- **Sales Target**: sales targets by product category, including target amount and corresponding date.  
-
-This dataset enables the analysis of sales performance, evaluation of gaps between actual results and targets, and monitoring of performance by product category.  
-
-## 📱 🔍 Results
-
-From the e-commerce dataset, four tables were created and modeled to feed the **four main pages** of the Power BI dashboard, offering a complete view of business performance.  
-
-- [Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG) : Overview of key KPIs (revenue, profit, margin, achievement rate). Dynamic filters allow exploration by period or category.  
-- [Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG) : Detailed analysis of sales by category and subcategory, with a waterfall chart for gaps and a line chart for achievement rate.  
-- [Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG) : Tracking sales and target evolution over time using a stacked column + line chart to reveal trends and seasonality.  
-- [Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG) : Study of category contribution and distribution, with a stacked column chart and product summary for easy comparison and decision-making.  
-
-
-Customer & Regional Analysis 👉 <a href="./Screen_PowerBI/2-Customer_and_Regional_analysis.PNG" target="_blank">here</a>  
-
-
-
-## 💼 Created by
-
-**Maxime HERVÉ**  
-📎 [My LinkedIn Profile](https://www.linkedin.com/in/maxime-herve-05925a144/)  
-📧 Contact: maxime.herve97@gmail.com  
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 # 🇫🇷 Analyse des performances commerciales – SQL & Power BI Dashboard
 
 Ce projet vise à analyser la performance commerciale d’une entreprise à travers un tableau de bord interactif créé sur Power BI.
@@ -140,4 +65,73 @@ Cette base permet d’analyser les performances commerciales, d’évaluer les �
 📧 Contact : maxime.herve97@gmail.com
 
 
----
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# 🇬🇧 Sales Performance Analysis – SQL & Power BI Dashboard
+
+This project aims to analyze a company’s sales performance through an interactive Power BI dashboard.  
+Data was extracted, cleaned, and transformed using SQL, then visualized in Power BI to facilitate performance tracking against business targets.
+
+## 📥 Download the Power BI File
+
+👉 [Click here to download the `.pbix` file](./Ecomm_dashboard.pbix)
+
+## 🎯 Objective
+
+- Extract and transform raw data using SQL queries.  
+- Design a clear and dynamic Power BI dashboard to monitor sales performance.  
+- Highlight gaps between actual results and defined targets.  
+- Provide a visual decision-making tool for management.  
+
+## 🧠 Hard Skills
+
+- SQL query writing: joins, aggregations, CTEs, dynamic calculations. See SQL code 👉 [here](./Ecomm.sql)  
+- Data cleaning, transformation, and modeling.  
+- Creation of measures and KPIs in Power BI (DAX).  
+- Use of Power Query for table management.  
+- Advanced visualization: waterfall chart, line chart, stacked column + line chart.  
+- Performance analysis (variance, achievement rate, trends).  
+
+## 🤝 Soft Skills
+
+- Analytical and synthesis mindset.  
+- Organization and precision in data handling.  
+- Visual communication and design sense.  
+- Autonomy in project execution.  
+
+## 📊 Dashboard Overview
+
+The dashboard provides an overview of monthly performance by product category.  
+Visualizations allow users to:
+
+- Compare actual performance vs targets (waterfall chart).  
+- Track achievement rate (%) by category (line chart).  
+- Visualize sales and target trends over time (stacked column + line chart).  
+- Identify each category’s contribution to overall performance.  
+- This dashboard offers a fast and visual understanding of business performance and improvement areas.  
+
+## 📁 Dataset
+
+The dataset used in this project comes from an Indian e-commerce dataset available on Kaggle. It consists of three main CSV files:  
+
+- **List of Orders**: purchase details including order ID, purchase date, and customer information.  
+- **Order Details**: order ID, price, quantity, profit, category, and subcategory of products.  
+- **Sales Target**: sales targets by product category, including target amount and corresponding date.  
+
+This dataset enables the analysis of sales performance, evaluation of gaps between actual results and targets, and monitoring of performance by product category.  
+
+## 📱 🔍 Results
+
+From the e-commerce dataset, four tables were created and modeled to feed the **four main pages** of the Power BI dashboard, offering a complete view of business performance.  
+
+- [Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG) : Overview of key KPIs (revenue, profit, margin, achievement rate). Dynamic filters allow exploration by period or category.  
+- [Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG) : Detailed analysis of sales by category and subcategory, with a waterfall chart for gaps and a line chart for achievement rate.  
+- [Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG) : Tracking sales and target evolution over time using a stacked column + line chart to reveal trends and seasonality.  
+- [Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG) : Study of category contribution and distribution, with a stacked column chart and product summary for easy comparison and decision-making.  
+
+## 💼 Created by
+
+**Maxime HERVÉ**  
+📎 [My LinkedIn Profile](https://www.linkedin.com/in/maxime-herve-05925a144/)  
+📧 Contact: maxime.herve97@gmail.com  
