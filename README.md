@@ -19,7 +19,7 @@ L’enjeu était donc de centraliser, transformer et visualiser ces données pou
 
 ### Page 1: Global Dashboard
 > Ce tableau de bord présente une vue d’ensemble des indicateurs de performance clés (KPI), incluant le chiffre d’affaires, le bénéfice, la marge et le taux d’atteinte des objectifs. Elle est conçue avec des filtres dynamiques permettant d'explorer la performance selon la période ou la catégorie souhaitée.
-![Page 1 - Global Dashboard](Screen Power BI/1- Global_Dashboard.PNG)
+![Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG)
 
 ### Page 2: Customer & Regional Analysis
 > Ce tableau de bord propose une analyse détaillée identifiant les régions et les clients où la performance commerciale est majoritairement générée, facilitant l'orientation de la stratégie produit et l'identification des écarts régionaux.
