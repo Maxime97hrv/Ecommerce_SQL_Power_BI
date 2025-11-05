@@ -13,7 +13,28 @@ L’enjeu était donc de centraliser, transformer et visualiser ces données pou
 3. **Déterminer les Top Produits** à forte marge et les segments sous-performants.  
 4. **Fournir une plateforme d’analyse dynamique** (Power BI) permettant une exploration libre et intuitive des données.  
 
-## 📊 2. Résultats Clés et Impact
+## 🔍 Résultats 👉 [ici](./Screen Power BI)
+
+À partir de la base e-commerce, quatre tables ont été créées et modélisées pour alimenter les quatre pages principales du tableau de bord Power BI, offrant une vision complète de la performance commerciale.
+
+### Page 1: Global Dashboard
+> Ce tableau de bord présente une vue d’ensemble des indicateurs de performance clés (KPI), incluant le chiffre d’affaires, le bénéfice, la marge et le taux d’atteinte des objectifs. Elle est conçue avec des filtres dynamiques permettant d'explorer la performance selon la période ou la catégorie souhaitée.
+![Page 1 - Global Dashboard](Screen Power BI/1- Global_Dashboard.PNG)
+
+### Page 2: Customer & Regional Analysis
+> Ce tableau de bord propose une analyse détaillée identifiant les régions et les clients où la performance commerciale est majoritairement générée, facilitant l'orientation de la stratégie produit et l'identification des écarts régionaux.
+![Page 2 - Customer & Regional Analysis](Screen Power BI/2- Customer_&_Regianal_analysis.PNG) 
+
+### Page 3: Product and Category Insights
+> Ce tableau de bord offre une compréhension rapide et visuelle des performances mensuelles par catégorie de produit, permettant de visualiser les tendances et de formuler des recommandations stratégiques basées sur l'optimisation d'une fraction du catalogue.
+- ![Page 3 - Product and Category Insights](Screen Power BI/3- Product_and_category_insights.PNG)
+
+### Page 4: Performance Analysis
+> Ce tableau de bord permet d'avoir une vision claire de la manière dont chaque catégorie impacte le résultat final, offrant ainsi les données nécessaires pour prioriser les actions commerciales. L'atteinte des objectifs (Achievement) est l'un des indicateurs de performance clés (KPI) les plus critiques qui est mesuré et suivi de manière dynamique tout au long du tableau de bord.
+![Page 4 - Performance Analysis](Screen Power BI/4- Performance_Analysis.PNG) 
+
+
+## 📊 Résultats Clés et Impact
 
 ### 🎯 Insight Majeur 1 – Concentration du Profit (Analyse de Pareto)
 > En se concentrant sur les 5 premières sous-catégories, nous atteignons **65 % du profit total**.
@@ -65,15 +86,6 @@ List of Orders : informations sur les achats, incluant l’ID de commande, la da
 Order Details : détails des commandes, incluant l’ID de commande, le prix, la quantité, le profit, ainsi que la catégorie et sous-catégorie des produits.
 Sales Target : les objectifs de vente par catégorie de produit, avec le montant et la date correspondante.
 Cette base permet d’analyser les performances commerciales, d’évaluer les écarts entre résultats réels et objectifs, et de suivre la performance par catégorie de produit.
-
-## 🔍 Résultats 👉 [ici](./Screen Power BI)
-
-À partir de la base e-commerce, quatre tables ont été créées et modélisées pour alimenter les quatre pages principales du tableau de bord Power BI, offrant une vision complète de la performance commerciale.
-
-- [Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG) : Vue d’ensemble des KPI clés (chiffre d’affaires, bénéfice, marge, taux d’atteinte). Des filtres dynamiques permettent d’explorer les performances par période ou catégorie.
-- [Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG) : Analysis – Analyse détaillée des ventes par catégorie et sous-catégorie, avec un waterfall chart pour les écarts et un line chart pour le taux d’atteinte.
-- [Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG) : Insights – Suivi de l’évolution des ventes et des objectifs dans le temps, à l’aide d’un stacked column + line chart révélant les tendances et la saisonnalité.
-- [Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG) :  Étude de la contribution et répartition des catégories, avec un stacked column chart et une synthèse par produit pour faciliter la comparaison et la prise de décision.
 
 ## 💼 Réalisé par
 
