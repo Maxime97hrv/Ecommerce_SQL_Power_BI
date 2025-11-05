@@ -13,7 +13,7 @@ L’enjeu était donc de centraliser, transformer et visualiser ces données pou
 3. **Déterminer les Top Produits** à forte marge et les segments sous-performants.  
 4. **Fournir une plateforme d’analyse dynamique** (Power BI) permettant une exploration libre et intuitive des données.  
 
-## 🔍 Résultats 👉 [ici](./Screen Power BI)
+## 🔍 Résultats
 
 À partir de la base e-commerce, quatre tables ont été créées et modélisées pour alimenter les quatre pages principales du tableau de bord Power BI, offrant une vision complète de la performance commerciale.
 
@@ -112,7 +112,7 @@ The challenge was therefore to centralize, transform, and visualize this data to
 3. **Determine Top Products** with high margins and underperforming segments.
 4. **Provide a dynamic analysis platform** (Power BI) allowing free and intuitive data exploration.
 
-## 🔍 Results 👉 [here](./Screen Power BI)
+## 🔍 Results
 
 Based on the e-commerce base, four tables were created and modeled to feed the four main pages of the Power BI dashboard, offering a complete view of commercial performance.
 
