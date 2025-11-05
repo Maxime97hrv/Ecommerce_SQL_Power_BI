@@ -36,18 +36,18 @@ L’enjeu était donc de centraliser, transformer et visualiser ces données pou
 
 ## 📊 Résultats Clés et Impact
 
-### 💎 Insight Majeur 1 – Focus Produit - Page 1
+### 💎 Insight Majeur Page 1
 > Le dashboard met en évidence le **Gap de marge à partir de la fin d'année 2018** .
 ➡ **Causes possibles :** Au lancement d’un e-commerce, la marge est faible parce que les coûts fixes pèsent lourd, l’acquisition client est chère et il n’y a pas encore de clients fidèles. Avec l’optimisation marketing et la hausse du volume de ventes, ces coûts se diluent et le CPA baisse. La marge augmente alors rapidement et se stabilise à un niveau plus élevé.
 
-### 🔍 Insight Majeur 2 – Performance Régionale - Page 2
+### 🔍 Insight Majeur Page 2
 > Les villes Pune et Indore génère à elles seules **35 % du profit total** et **30 %** du revenu total probablement parce qu'elles peuvent abriter une forte proportion de clients premium ou à fort pouvoir d’achat.
 
-### 🎯 Insight Majeur 3 – Concentration du Profit (Analyse de Pareto) - Page 3
+### 🎯 Insight Majeur Page 3
 > En se concentrant sur les 5 premières sous-catégories, nous atteignons **65 % du profit total**.
 ➡ **Recommandations:** En focalisant sur les 5 meilleures sous-catégories, l'entreprise peut obtenir la majorité des bénéfices en optimisant seulement une fraction de son catalogue
 
-### 📈 Insight Majeur 4 – Pilotage des Objectifs - Page 4
+### 📈 Insight Majeur Page 4
 > L’analyse dynamique des **écarts entre objectifs et performances réelles** a permis d’identifier les mois critiques et les catégories en retard.  
 ➡ **Résultat :** meilleure allocation des ressources et priorisation des actions commerciales.
 
@@ -134,18 +134,18 @@ Based on the e-commerce base, four tables were created and modeled to feed the f
 
 ## 📊 Key Results and Impact
 
-### 💎 Key Insight 1 – Product Focus - Page 1
+### 💎 Key Insight Page 1
 > The dashboard highlights the **margin gap from the end of 2018**.
 ➡ **Possible causes:** When launching an e-commerce business, margins are low because fixed costs are high, customer acquisition is expensive, and there are no loyal customers yet. With marketing optimization and increased sales volume, these costs are diluted and the CPA decreases. Margins then increase rapidly and stabilize at a higher level.
 
-### 🔍 Key Insight 2 – Regional Performance - Page 2
+### 🔍 Key Insight Page 2
 > The cities of Pune and Indore alone generate **35% of total profit** and **30%** of total revenue, probably because they are home to a high proportion of premium or high-spending customers.
 
-### 🎯 Key Insight 3 – Profit Concentration (Pareto Analysis) - Page 3
+### 🎯 Key Insight Page 3
 > By focusing on the top 5 subcategories, we achieve **65% of total profit**.
 ➡ **Recommendations:** By focusing on the top 5 subcategories, the company can obtain the majority of profits by optimizing only a fraction of its catalog.
 
-### 📈 Key Insight 4 – Goal Management - Page 4
+### 📈 Key Insight Page 4
 > Dynamic analysis of **gaps between goals and actual performance** identified critical months and categories that were falling behind.  
 ➡ **Result:** better resource allocation and prioritization of sales actions.
 
