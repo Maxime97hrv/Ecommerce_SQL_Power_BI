@@ -23,15 +23,15 @@ L’enjeu était donc de centraliser, transformer et visualiser ces données pou
 
 ### Page 2: Customer & Regional Analysis
 > Ce tableau de bord propose une analyse détaillée identifiant les régions et les clients où la performance commerciale est majoritairement générée, facilitant l'orientation de la stratégie produit et l'identification des écarts régionaux.
-![Page 2 - Customer & Regional Analysis](Screen Power BI/2- Customer_&_Regianal_analysis.PNG) 
+![Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG)
 
 ### Page 3: Product and Category Insights
 > Ce tableau de bord offre une compréhension rapide et visuelle des performances mensuelles par catégorie de produit, permettant de visualiser les tendances et de formuler des recommandations stratégiques basées sur l'optimisation d'une fraction du catalogue.
-- ![Page 3 - Product and Category Insights](Screen Power BI/3- Product_and_category_insights.PNG)
+- ![Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG)
 
 ### Page 4: Performance Analysis
 > Ce tableau de bord permet d'avoir une vision claire de la manière dont chaque catégorie impacte le résultat final, offrant ainsi les données nécessaires pour prioriser les actions commerciales. L'atteinte des objectifs (Achievement) est l'un des indicateurs de performance clés (KPI) les plus critiques qui est mesuré et suivi de manière dynamique tout au long du tableau de bord.
-![Page 4 - Performance Analysis](Screen Power BI/4- Performance_Analysis.PNG) 
+![Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG)
 
 
 ## 📊 Résultats Clés et Impact
@@ -112,7 +112,27 @@ The challenge was therefore to centralize, transform, and visualize this data to
 3. **Determine Top Products** with high margins and underperforming segments.
 4. **Provide a dynamic analysis platform** (Power BI) allowing free and intuitive data exploration.
 
-## 📊 2. Key Results and Impact
+## 🔍 Results 👉 [here](./Screen Power BI)
+
+Based on the e-commerce base, four tables were created and modeled to feed the four main pages of the Power BI dashboard, offering a complete view of commercial performance.
+
+### Page 1: Global Dashboard
+> This dashboard provides an overview of key performance indicators (KPIs), including revenue, profit, margin, and target achievement rate. It is designed with dynamic filters that allow you to explore performance by period or category.
+![Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG)
+
+### Page 2: Customer & Regional Analysis
+> This dashboard provides a detailed analysis identifying the regions and customers where most sales performance is generated, facilitating product strategy orientation and the identification of regional discrepancies.
+![Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG): Analysis – Detailed analysis of sales by category and sub-category, with a waterfall chart for gaps and a line chart for the attainment rate.
+
+### Page 3: Product and Category Insights
+> This dashboard provides a quick, visual understanding of monthly performance by product category, allowing you to visualize trends and make strategic recommendations based on optimizing a portion of the catalog.
+![Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG)
+
+### Page 4: Performance Analysis
+> This dashboard provides a clear overview of how each category impacts the final result, providing the data needed to prioritize sales actions. Achievement is one of the most critical key performance indicators (KPIs) that is measured and tracked dynamically throughout the dashboard.
+![Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG)
+
+## 📊 Key Results and Impact
 
 ### 🎯 Major Insight 1 – Profit Concentration (Pareto Analysis)
 > By focusing on the top 5 sub-categories, we achieve **65% of the total profit**.
@@ -163,15 +183,6 @@ List of Orders: purchase information, including Order ID, purchase date, and cus
 Order Details: order details, including Order ID, price, quantity, profit, as well as product category and sub-category.
 Sales Target: sales goals by product category, with the corresponding amount and date.
 This base allows for analyzing commercial performance, evaluating gaps between actual results and goals, and tracking performance by product category.
-
-## 🔍 Results 👉 [here](./Screen Power BI)
-
-Based on the e-commerce base, four tables were created and modeled to feed the four main pages of the Power BI dashboard, offering a complete view of commercial performance.
-
-- [Page 1 - Global Dashboard](./Screen%20Power%20BI/1-%20Global_Dashboard.PNG): Overview of key KPIs (revenue, profit, margin, attainment rate). Dynamic filters allow for exploring performance by period or category.
-- [Page 2 - Customer & Regional Analysis](./Screen%20Power%20BI/2-%20Customer_%26_Regianal_analysis.PNG): Analysis – Detailed analysis of sales by category and sub-category, with a waterfall chart for gaps and a line chart for the attainment rate.
-- [Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG): Insights – Tracking the evolution of sales and goals over time, using a stacked column + line chart revealing trends and seasonality.
-- [Page 4 - Performance Analysis](./Screen%20Power%20BI/4-%20Performance_Analysis.PNG): Study of the contribution and distribution of categories, with a stacked column chart and a product summary to facilitate comparison and decision-making.
 
 ## 💼 Created by
 
