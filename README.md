@@ -27,7 +27,7 @@ L’enjeu était donc de centraliser, transformer et visualiser ces données pou
 
 ### Page 3: Product and Category Insights
 > Ce tableau de bord offre une compréhension rapide et visuelle des performances mensuelles par catégorie de produit, permettant de visualiser les tendances et de formuler des recommandations stratégiques basées sur l'optimisation d'une fraction du catalogue.
-- ![Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG)
+![Page 3 - Product and Category Insights](./Screen%20Power%20BI/3-%20Product_and_category_insights.PNG)
 
 ### Page 4: Performance Analysis
 > Ce tableau de bord permet d'avoir une vision claire de la manière dont chaque catégorie impacte le résultat final, offrant ainsi les données nécessaires pour prioriser les actions commerciales. L'atteinte des objectifs (Achievement) est l'un des indicateurs de performance clés (KPI) les plus critiques qui est mesuré et suivi de manière dynamique tout au long du tableau de bord.
@@ -36,18 +36,18 @@ L’enjeu était donc de centraliser, transformer et visualiser ces données pou
 
 ## 📊 Résultats Clés et Impact
 
-### 🎯 Insight Majeur 1 – Concentration du Profit (Analyse de Pareto)
+### 💎 Insight Majeur 1 – Focus Produit - Page 1
+> Le dashboard met en évidence le **Gap de marge à partir de la fin d'année 2018** .
+➡ **Causes possibles :** Au lancement d’un e-commerce, la marge est faible parce que les coûts fixes pèsent lourd, l’acquisition client est chère et il n’y a pas encore de clients fidèles. Avec l’optimisation marketing et la hausse du volume de ventes, ces coûts se diluent et le CPA baisse. La marge augmente alors rapidement et se stabilise à un niveau plus élevé.
+
+### 🔍 Insight Majeur 2 – Performance Régionale - Page 2
+> Les villes Pune et Indore génère à elles seules **35 % du profit total** et **30 %** du revenu total probablement parce qu'elles peuvent abriter une forte proportion de clients premium ou à fort pouvoir d’achat.
+
+### 🎯 Insight Majeur 3 – Concentration du Profit (Analyse de Pareto) - Page 3
 > En se concentrant sur les 5 premières sous-catégories, nous atteignons **65 % du profit total**.
 ➡ **Recommandations:** En focalisant sur les 5 meilleures sous-catégories, l'entreprise peut obtenir la majorité des bénéfices en optimisant seulement une fraction de son catalogue
 
-### 🔍 Insight Majeur 2 – Performance Régionale
-> Les villes Pune et Indore génère à elles seules **35 % du profit total** et **30 % **du revenu total probablement parce qu'elles peuvent abriter une forte proportion de clients premium ou à fort pouvoir d’achat.
-
-### 💎 Insight Majeur 3 – Focus Produit
-> Le dashboard met en évidence le **Top 6 des clients générant le profit le plus élevé ** ainsi que le **Top 6 à forte marge mais faible visibilité**.  
-➡ **Nous remarquons que ce ne sont pas les mêmes:** se concentrer sur les clients à fort profit et trouver des moyens pour réduire le cout des transports et donc la marge **
-
-### 📈 Insight Majeur 4 – Pilotage des Objectifs
+### 📈 Insight Majeur 4 – Pilotage des Objectifs - Page 4
 > L’analyse dynamique des **écarts entre objectifs et performances réelles** a permis d’identifier les mois critiques et les catégories en retard.  
 ➡ **Résultat :** meilleure allocation des ressources et priorisation des actions commerciales.
 
@@ -134,19 +134,19 @@ Based on the e-commerce base, four tables were created and modeled to feed the f
 
 ## 📊 Key Results and Impact
 
-### 🎯 Major Insight 1 – Profit Concentration (Pareto Analysis)
-> By focusing on the top 5 sub-categories, we achieve **65% of the total profit**.
-➡ **Recommendations:** By focusing on the 5 best sub-categories, the company can achieve the majority of profits by optimizing only a fraction of its catalog.
+### 💎 Key Insight 1 – Product Focus - Page 1
+> The dashboard highlights the **margin gap from the end of 2018**.
+➡ **Possible causes:** When launching an e-commerce business, margins are low because fixed costs are high, customer acquisition is expensive, and there are no loyal customers yet. With marketing optimization and increased sales volume, these costs are diluted and the CPA decreases. Margins then increase rapidly and stabilize at a higher level.
 
-### 🔍 Major Insight 2 – Regional Performance
-> The cities of Pune and Indore alone generate **35% of the total profit** and **30%** of the total revenue, likely because they may house a high proportion of premium or high-spending customers.
+### 🔍 Key Insight 2 – Regional Performance - Page 2
+> The cities of Pune and Indore alone generate **35% of total profit** and **30%** of total revenue, probably because they are home to a high proportion of premium or high-spending customers.
 
-### 💎 Major Insight 3 – Product Focus
-> The dashboard highlights the **Top 6 customers generating the highest profit** as well as the **Top 6 with high margin but low visibility**.
-➡ **We note that they are not the same:** focus on high-profit customers and find ways to reduce transport costs and thus the margin.
+### 🎯 Key Insight 3 – Profit Concentration (Pareto Analysis) - Page 3
+> By focusing on the top 5 subcategories, we achieve **65% of total profit**.
+➡ **Recommendations:** By focusing on the top 5 subcategories, the company can obtain the majority of profits by optimizing only a fraction of its catalog.
 
-### 📈 Major Insight 4 – Goal Monitoring
-> Dynamic analysis of **gaps between goals and actual performance** allowed for the identification of critical months and lagging categories.
+### 📈 Key Insight 4 – Goal Management - Page 4
+> Dynamic analysis of **gaps between goals and actual performance** identified critical months and categories that were falling behind.  
 ➡ **Result:** better resource allocation and prioritization of sales actions.
 
 ## 🧠 Hard Skills
